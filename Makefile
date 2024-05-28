@@ -30,5 +30,5 @@ $(BINDIR)/$(TARGETS): $(SRCDIR)/$(TARGETS).c $(OBJECTS)
 	$(CC) $(CFLAGS) $^ -o $@
 
 # Dependencias
-# $(SRCDIR)/main.c: $(BINDIR)/matriz.o
-# $(BINDIR)/matriz.o: $(SRCDIR)/matriz.c $(SRCDIR)/matriz.h
+$(SRCDIR)/ring.c: $(BINDIR)/utils.o
+$(BINDIR)/utils.o: $(SRCDIR)/utils.c $(SRCDIR)/utils.h
